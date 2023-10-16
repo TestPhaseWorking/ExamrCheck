@@ -1,11 +1,10 @@
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from("#navbar", {
-    y: -200,
+    y: -100,
     opacity: 0,
-    duration: 0.5,
-    delay: 0.2,
-    stagger: true
+    duration: 0.2,
+    delay: 0.2
 })
 
 var t1 = gsap.timeline();
@@ -15,13 +14,20 @@ t1.from(".hero-content", {
     delay: 0.2
 })
 
-gsap.from(".cards > *", {
+gsap.from("#boost-content", {
+    y: 50,
     scale: 0.5,
-    opacity: 0,
-    y: 20,
-    stagger: 0.2,
     duration: 1,
-    scrollTrigger: ".cards > *" 
+    opacity: 0,
+    border: 0,
+})
+
+gsap.from(".cards > *", {
+    scale: 0.6,
+    opacity: 0,
+    y: 100,
+    stagger: 0.2,
+    duration: 0.5
 })
 
 gsap.from("#define-content", {
